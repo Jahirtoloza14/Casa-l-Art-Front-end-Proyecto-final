@@ -1,0 +1,11 @@
+#login{
+    height: 1200px;
+    margin: 3%;
+    background-color: white;
+    display: flex;
+}
+#zoom-image {
+
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+    transition: transform 0.3s ease; /* Suaviza la transición de zoom */
+  }

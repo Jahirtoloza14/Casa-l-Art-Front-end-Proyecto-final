@@ -1,0 +1,52 @@
+@keyframes slideInLeft {
+    from{
+        transform: translateX(-700px);
+    }
+    to {
+        transform: translateX(250);
+    }
+}
+
+@keyframes slideInLeft2 {
+    from{
+        transform: translateX(700px);
+    }
+    to {
+        transform: translateX(-250);
+    }
+}
+
+#img{
+    animation-name: slideInLeft;
+    animation-duration: 3s;
+    
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    
+    height: 700px;
+}
+#container-reservation{
+    
+
+
+
+    animation-name: slideInLeft2;
+    animation-duration: 3s;
+    
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+.reservation{
+    height: 700px;
+    overflow-x: hidden;
+    margin: 5%;
+    
+}
+@media (max-width: 480px) {
+    #img{
+        height: 320px;
+        width: 220px;
+      
+    }
+    
+  }

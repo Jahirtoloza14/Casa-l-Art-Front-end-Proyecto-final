@@ -1,0 +1,27 @@
+#profile{
+    height: 1200px;
+}
+#reservation{
+    height: 900px;
+
+}
+#grid{
+    height: 700px;
+    width: 100%;
+
+}
+
+@media (max-width: 480px) {
+    #profile{
+        height: 1200px;
+    }
+    #reservation{
+        height: 600px;
+    
+    }
+    #grid{
+        height: 300px;
+        width: 100%;
+    
+    }
+  }

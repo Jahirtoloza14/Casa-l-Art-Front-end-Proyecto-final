@@ -1,0 +1,21 @@
+#login {
+    height: 1200px;
+    margin: 3%;
+    background-color: white;
+    margin: 15px;
+    margin-left: 250px;
+  
+    
+}
+
+
+@media (max-width: 480px) {
+    #login {
+        height: 1200px;
+        margin: 3%;
+        background-color: white;
+        
+        
+    }
+  
+    }

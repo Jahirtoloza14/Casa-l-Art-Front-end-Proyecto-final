@@ -1,0 +1,30 @@
+#admin {
+    height: 730px;
+}
+
+.example-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.example-header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.wrapper {
+    height: 500px;
+}
+.text-button{
+    font-size: 13px;
+    text-align: center;
+    display: flex;
+}
+#button-delete{
+    height: 16px;
+    display: flex;
+    
+}

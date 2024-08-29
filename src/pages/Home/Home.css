@@ -1,0 +1,264 @@
+@keyframes slide {
+  from {
+
+    opacity: 10%;
+    scale: 80%;
+  }
+
+  to {
+
+    opacity: 100%;
+    scale: 100%;
+  }
+}
+
+@keyframes slide2 {
+  from {
+
+    opacity: 10%;
+    scale: 90%;
+  }
+
+  to {
+
+    opacity: 100%;
+    scale: 100%;
+  }
+}
+
+@keyframes slideInLeft3 {
+  from {
+    transform: translatey(500px);
+  }
+
+  to {
+    transform: translateX(250);
+  }
+}
+
+
+@keyframes slideInLeft4 {
+  from {
+    transform: translateY(-400px);
+  }
+
+  to {
+    transform: translateX(250);
+  }
+}
+
+@keyframes slideInLeft5 {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+#carousel2 {
+  view-timeline-name: --image2;
+  view-timeline-axis: block;
+
+  animation-timeline: --image2;
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  overflow-x: hidden;
+}
+
+
+
+
+#tab {
+  animation-name: slideInLeft5;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+
+#text1 {
+  view-timeline-name: --image4;
+  view-timeline-axis: block;
+
+  animation-timeline: --image4;
+  animation-name: slide2;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  overflow-x: hidden;
+
+  height: 200px;
+  width: 90%;
+  margin-top: 60px;
+  margin-left: 130px;
+}
+
+
+
+
+
+#text-video {
+  animation-name: slideInLeft3;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+
+#button-video {
+  animation-name: slideInLeft4;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+
+
+#container-carousel-text {
+  width: 90%;
+}
+
+
+#zoom-image {
+
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+}
+
+
+#zoom-image:hover {
+  transform: scale(1.1);
+
+}
+
+/* Ensure the video container occupies the full viewport */
+.video-content {
+  position: relative;
+  width: 1861px;
+  height: 100vh;
+  /* Full height of the viewport */
+  overflow: hidden;
+  /* Hide any overflow */
+  padding: 0px;
+  /* Remove any default padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.text-content {
+  color: white;
+ 
+ 
+  background-color: rgba(0, 0, 0, 0.5);
+ 
+  border-radius: 10px;
+  
+  max-width: 80%;
+ 
+  text-align: center;
+  
+}
+
+
+#text-video {
+  margin-bottom: 10px;
+  margin-left: 30px;
+
+}
+#text-principal{
+  margin-top: 250px;
+}
+#button-video {
+
+  margin-top: 20px;
+  background-color: none;
+  color: white;
+  border-radius: 0px;
+  padding: 10px 20px;
+ 
+}
+
+
+
+ @media(min-width : 1200px)    {
+ 
+    .video-content {
+      width: 100%;
+      
+    }
+  
+    #text-video {
+      font-size: 1rem;
+      position: absolute;
+      top:-200px;
+      left: 20px;
+    }
+  
+    #button-video {
+      font-size: 0.875rem;
+      padding: 6px 12px;
+      position: absolute;
+      top:-216px;
+    }
+    #carousel2 {
+      font-size: 0.875rem;
+      padding: 6px 12px;
+      margin-top: 130px;
+    }
+    #carousel1 {
+      font-size: 0.875rem;
+      padding: 6px 12px;
+      margin-top: 100px;
+    }
+    #text1 {
+       display: inline;
+       
+      }
+ }
+ @media(max-width : 1220px)    {
+ 
+  .video-content {
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    align-items: center;
+  }
+
+  #text-video {
+    font-size: 1rem;
+    position: absolute;
+    top:-200px;
+    left: 20px;
+  }
+
+  #button-video {
+    font-size: 0.875rem;
+    padding: 6px 12px;
+    position: absolute;
+    top:-216px;
+  }
+  #carousel2 {
+    font-size: 0.875rem;
+    padding: 6px 12px;
+    margin-top: 130px;
+    
+  }
+  #carousel1 {
+    font-size: 0.875rem;
+    padding: 6px 12px;
+    margin-top: 100px;
+   
+  }
+ 
+  #text1 {
+     display: inline;
+     
+    }
+}
+
+
