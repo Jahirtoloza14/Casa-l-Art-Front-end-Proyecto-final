@@ -3,15 +3,28 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Image from 'react-bootstrap/Image';
 import "./Home.css"
+import { useNavigate } from "react-router-dom";
+import React from 'react';
 
 export const Home = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/Reservation');
+  };
+
+
+
+
   return (
     <>
       <div className="m-0 p-0 text-bg-dark bg-light ">
         <div className="video-content row text-center  " >
-          <div className="col fs-5  position-absolute top-50 start-50 translate-middle " id="text-principal">
+          <div className="col fs-5 position-absolute  top-50 start-50 translate-middle " id="text-principal">
+         
             <p id="text-video" className="text-center fs-1 fst-italic">Bienvenidos</p>
-            <button id="button-video" className="btn fs-5  "><p >Reservar</p></button>
+            <button onClick={handleClick} id="button-video" type="button" className="btn fs-5  ">Reservar</button>
+           
           </div>
           <video className="video-background" loop={true} autoPlay={true} muted={true}  >
             <source src="/videos/introduction.Mp4" type="video/Mp4" />

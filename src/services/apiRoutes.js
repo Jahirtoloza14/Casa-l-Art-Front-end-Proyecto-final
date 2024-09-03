@@ -150,7 +150,7 @@ export const deleteUserCall = async ( id, token) => {
   };
 
   const res = await axios.delete(`${API_URL}users/deleteUser/${id}`,config);
-  return res;
+  return res.data;
 }
 
 // .get("url", headers(opcional))

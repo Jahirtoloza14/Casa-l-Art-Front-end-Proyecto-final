@@ -18,6 +18,7 @@ export const Reservation = () => {
         last_name: "",
         user_id: "",
         Comensales: "",
+        Carta:"",
         Menu: "",
         table: "",
         date: ""
@@ -98,7 +99,7 @@ export const Reservation = () => {
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} md="4" >
-                                    <Form.Label>Menu</Form.Label>
+                                    <Form.Label column sm="2">Menu</Form.Label>
                                     <Form.Control className="col border-success light"
                                         required
                                         type="text"
@@ -107,21 +108,30 @@ export const Reservation = () => {
                                     />
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
-                                <Form.Group as={Col} md="4" >
-                                    <Form.Label>Comensales</Form.Label>
-                                    <InputGroup hasValidation>
-                                        <Form.Control className="col border-success bg-light"
-                                            type="text"
-                                            name={"Comensales"}
+                                <Form.Group as={Col} md="4" className="mb-4" >
+                                    <Form.Label column sm="2">Comensales:</Form.Label>
+                                    
+                                        <Form.Control
+                                            className="col border-success bg-light"
+                                            type="number"                               
                                             onChange={inputHandler}
-                                            aria-describedby="inputGroupPrepend"
-                                            required
+                                            name={"Comensales"}
                                         />
-                                        <Form.Control.Feedback type="invalid">
-                                            Please choose a username.
-                                        </Form.Control.Feedback>
-                                    </InputGroup>
+                                    
                                 </Form.Group>
+                                <Form.Group as={Col} md="4" className="mb-4" >
+                                    <Form.Label column sm="2">Carta:</Form.Label>
+                                    
+                                        <Form.Control
+                                            className="col border-success bg-light"
+                                            type="text"  
+                                            name={"Carta"}                             
+                                            onChange={inputHandler}
+                                            min="1"
+                                        />
+                                 
+                                </Form.Group>
+
                                 <Form.Group as={Col} md="4" >
                                     <Form.Label>Mesa</Form.Label>
                                     <InputGroup hasValidation>
@@ -174,6 +184,7 @@ export const Reservation = () => {
                     <p><strong>Apellido:</strong> {credentials.last_name}</p>
                     <p><strong>Numero ID:</strong> {credentials.user_id}</p>
                     <p><strong>Comensales:</strong> {credentials.Comensales}</p>
+                    <p><strong>Carta:</strong> {credentials.Carta}</p>
                     <p><strong>Mesa:</strong> {credentials.table}</p>
                     <p><strong>Menu:</strong> {credentials.Menu}</p>
                     <p><strong>Fecha:</strong> {credentials.date}</p>

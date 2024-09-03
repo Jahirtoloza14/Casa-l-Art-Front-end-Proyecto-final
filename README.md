@@ -42,19 +42,19 @@ En este proyecto he utlizado las siguientes tecnologias
 INICIO
 ![Inicio](./images/home.png)
 REGISTRO
-![Registro](./images/Register.png)
+![Registro](./images/registro-client.png)
 LOGIN
-![Login](./images/login.png)
-PERFIL
-![Perfil](./images/profile.png)
+![Login](./images/client-vip.png)
+
+VISTA DE PERFIL Y CITA DESDE UN USUARIO-CLIENTE LOGEADO
+![Cita propia de usuario](./images/profile-client.png)
+PERFIL DE USUARIO-ADMINISTRADOR
+![Perfil](./images/profile-admin.png)
 USUARIOS COMO ADMINISTRADOR
-![Usuarios](./images/users.png)
+![Usuarios](./images/usuarios-admin.png)
 CITAS COMO ADMINISTRADOR
-![Citas](./images/appointments.png)
-FILTRO DE BUSQUEDA
-![Search](./images/search.png)
-VISTA DE CITA DESDE UN USUARIO LOGEADO
-![Cita propia de usuario](./images/userappointment.png)
+![Citas](./images/reservas-admin.png)
+
 
 
 
@@ -84,7 +84,7 @@ Si deseas contribuir o realizar modificaciones locales al proyecto, sigue estos 
 4. Para ver tus cambios localmente, simplemente abre el archivo HTML en un navegador.
 
 ## Backend ⚙️
-Este proyecto depende del backend para su funcionalidad completa. Asegúrate de tener el backend instalado y en ejecución antes de iniciar la aplicación frontend. Puedes encontrar el código fuente del backend en el siguiente repositorio: [Backend Repository](https://github.com/Jahirtoloza14/BACK-END-STUDIO-TATTOO).
+Este proyecto depende del backend para su funcionalidad completa. Asegúrate de tener el backend instalado y en ejecución antes de iniciar la aplicación frontend. Puedes encontrar el código fuente del backend en el siguiente repositorio: [Backend Repository](https://github.com/Jahirtoloza14/Casa-l-Art-Back-end--Proyecto-Final/tree/main).
 
 Sigue las instrucciones en el repositorio del backend para clonar y ejecutar el servidor.
 

@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-export const  Header = () => {
+export const Header = () => {
   const userData = useSelector(getUserData)
   useEffect(() => {
     console.log(userData);
@@ -45,16 +45,24 @@ export const  Header = () => {
             <Nav.Link href="/Reservation">Reservar</Nav.Link>
             <NavDropdown.Divider />
             {token ? (
-              <NavDropdown.Item onClick={() => logMeOut()} >
-                Cerrar Sesion
-              </NavDropdown.Item>) :
+              <>
+                
+                <NavDropdown.Item onClick={() => logMeOut()} >
+
+                </NavDropdown.Item></>) :
               (<Nav.Link href="/Login">Cliente VIP</Nav.Link>)
             }
             <NavDropdown.Divider />
+
             {token ? (
-              <NavDropdown.Item onClick={() => logMeOut()} >                
-              </NavDropdown.Item>) :
+              <>
+                <Nav.Link href="/Admin">Perfil</Nav.Link>
+                <NavDropdown.Item onClick={() => logMeOut()} >
+                  Cerrar Sesion
+
+                </NavDropdown.Item></>) :
               (<Nav.Link href="/LoginAdmin">Administrador</Nav.Link>)
+
             }
           </Nav>
         </Container>

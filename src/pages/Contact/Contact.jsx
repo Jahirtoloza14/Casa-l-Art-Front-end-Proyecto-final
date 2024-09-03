@@ -13,6 +13,7 @@ export const Contact = () => {
                 <p className='col fs-1 text-center'>Visitanos</p>
                 <div className='row'></div>
                 <div className='row'>
+                    <p>Telefono: 680 35 48 77</p>
                     <p>Paraje Cucucho C-8</p>
                     <p>03660- Novelda</p>
                     <p>Viernes y Sábados de 14.00h a 01.30h y Domingos de 14.00h a 21.00h

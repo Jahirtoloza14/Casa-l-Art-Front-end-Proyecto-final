@@ -32,7 +32,7 @@ export const Login = () => {
     const handleShow = () => setShow(true);
 
     const inputChangedLogin = (e) => {
-        //genero la funcion que bindea
+        
 
         setCredentials2(
             (prevState) => ({
@@ -42,7 +42,6 @@ export const Login = () => {
         )
     }
     const inputChangedRegister = (e) => {
-        //genero la funcion que bindea
         setCredentials(
             (prevState) => ({
                 ...prevState,
@@ -58,23 +57,28 @@ export const Login = () => {
     }
     //login
     const loginMe = async () => {
-        // esta sera la funcion que desencadenara el login
+        
         const anwser = await loginCall(credentials2)
         if (anwser.data.token) {
-            // decodificamos el token
+     
             const uDecodificado = decodeToken(anwser.data.token);
-            const passport = {
-                token: anwser.data.token,
-                decodificado: uDecodificado
-            }
-            dispatch(login(passport))
-            // guardariamos passport
-            sessionStorage.setItem("passport", JSON.stringify(passport))
-            setCredentials(`bienvenid@ de nuevo`)
-            setTimeout(() => {
-                navigate("/profile", { state: passport })
-            }, 500)
-        }
+            if (uDecodificado.role === 'client') {
+                const passport = {
+                    token: anwser.data.token,
+                    decodificado: uDecodificado
+                };
+                   
+                dispatch(login(passport));             
+                sessionStorage.setItem("passport", JSON.stringify(passport));             
+                setCredentials(`bienvenid@ de nuevo`);
+
+                setTimeout(() => {
+                    navigate("/Profile", { state: passport });
+                }, 500);
+            } else {
+                window.alert("acceso denegado")
+                
+            }}
     }
     return (
         <>

@@ -37,6 +37,7 @@ export const Admin = () => {
         { field: "last_name" },
         { field: "user_id" },
         { field: "Menu" },
+        { field: "Carta" },
         { field: "Comensales" },
         { field: "table" },
         { field: "date" },
@@ -44,7 +45,7 @@ export const Admin = () => {
             headerName: "Actions",
             field: "actions",
             cellRenderer: (params) => (
-                <button className="btn btn-danger " id="button-delete"
+                <button className="btn  " id="button-delete"
                     onClick={() => {
                         const userConfirmed = window.confirm('Estas seguro que quiere eliminar la reserva');
                         if (userConfirmed) {
@@ -52,7 +53,7 @@ export const Admin = () => {
                             window.alert('eliminado exitosamente');
                         }
                     }}>
-                    <p className="text-button">Delete</p>
+                    <p className="text-button">Eliminar</p>
                 </button>
             ),
         }
@@ -148,16 +149,13 @@ export const Admin = () => {
 
     const handleDeleteUser = async (id) => {
         try {
-             await deleteUserCall(id, userData.token);   
-           
+            await deleteUserCall(id, userData.token);   
         } catch (error) {
-            console.error("Error deleting user:", error);
+            console.error("Error deleting user:", error.response ? error.response.data : error.message);
         }
     };
 
-    const handleRowSelected = (state) => {
-        setSelectedUser(state.selectedRows[0]); // selecciona el primer usuario seleccionado
-    };
+   
 
     const columns = [
         { name: "ID", selector: row => row.id },
@@ -167,12 +165,12 @@ export const Admin = () => {
         { name: "Role Name", selector: row => row.role.name },
         {
             name: 'Actions',
-            cell:(params) => (
-                <button className="btn  " 
+            cell:(row) => (
+                <button className="btn " 
                     onClick={() => {
-                        const userConfirmed = window.confirm('Estas seguro que quiere eliminar la reserva');
+                        const userConfirmed = window.confirm('Estas seguro que quiere eliminar usuario');
                         if (userConfirmed) {
-                            handleDeleteUser(params.data.id)
+                            handleDeleteUser(row.id)
                             window.alert('eliminado exitosamente');
                         }
                     }}>
@@ -236,22 +234,20 @@ export const Admin = () => {
                     </Tab>
                     <Tab eventKey="profile" title="Usuarios">
                         <div>
-                            <h1>Usuarios</h1>
+                            <h1 className="fst-italic">Usuarios</h1>
                             <DataTable
                                 columns={columns}
                                 data={usersData}
-                                selectableRows
+                              
                                 pagination
                                 paginationPerPage={5}
-                                onSelectedRowsChange={handleRowSelected}
+                 
                             />
-                             <button className="btn btn-danger" onClick={handleDeleteUser} disabled={!selectedUser}>
-                                        Eliminar Usuario Seleccionado
-                                    </button>
+                             
                         </div>
                     </Tab>
                     <Tab eventKey="contact" title="Citas" className="wrapper">
-                        <h1>CITAS</h1>
+                        <h1 className="fst-italic">Reservas</h1>
                         <div style={containerStyle}>
                             <div className="example-wrapper">
                                 <div className="example-header">

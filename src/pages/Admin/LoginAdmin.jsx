@@ -62,19 +62,26 @@ export const LoginAdmin = () => {
         if (anwser.data.token) {
             // decodificamos el token
             const uDecodificado = decodeToken(anwser.data.token);
-            const passport = {
-                token: anwser.data.token,
-                decodificado: uDecodificado
+
+            if (uDecodificado.role === 'admin') {
+                const passport = {
+                    token: anwser.data.token,
+                    decodificado: uDecodificado
+                };
+                   
+                dispatch(login(passport));             
+                sessionStorage.setItem("passport", JSON.stringify(passport));             
+                setCredentials(`bienvenid@ de nuevo`);
+
+                setTimeout(() => {
+                    navigate("/Admin", { state: passport });
+                }, 500);
+            } else {
+                window.alert("acceso denegado")
+                
             }
-            dispatch(login(passport))
-            // guardariamos passport
-            sessionStorage.setItem("passport", JSON.stringify(passport))
-            setCredentials(`bienvenid@ de nuevo`)
-            setTimeout(() => {
-                navigate("/Admin", { state: passport })
-            }, 500)
         }
-    }
+}
     return (
         <>
             {msg === "" ?
